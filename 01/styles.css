@@ -1,26 +1,29 @@
 @import "reset.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900,900i');
 
 body {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 form {
   margin-top: 45vh;
+
   transform: translateY(-50%);
   text-align: center;
 }
 
 input {
-  text-align: center;
+  padding-bottom: 0.15em;
 
-  font-size: 5vw;
-  font-weight: 600;
+  transition: border-bottom 300ms ease;
+  text-align: center;
 
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding-bottom: 0.25em;
-  transition: border-bottom 300ms ease;
+
+  font-size: 8vw;
+  font-weight: 900;
+
   caret-color: rgb(255, 0, 0);
 }
 
@@ -31,23 +34,21 @@ input::placeholder {
 }
 
 input:focus {
-  outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+  outline: none;
 }
 
 input:disabled {
-  color: rgba(0, 0, 0, 0.45)
+  color: rgba(0, 0, 0, 0.45);
 }
 
 ul {
   display: flex;
   flex-direction: column-reverse;
 
-  text-align: center;
-
   list-style: none;
 
-
+  text-align: center;
   text-decoration: line-through;
 
   opacity: 0.25;
@@ -60,11 +61,12 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 0;
   height: 100vh;
 
-  transition-property: width;
   transition-timing-function: ease;
+  transition-property: width;
 
   background-color: rgba(0, 0, 0, 0.25);
 }
